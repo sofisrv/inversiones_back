@@ -1,0 +1,13 @@
+GET http://localhost:3030/retiros
+
+###
+ 
+POST http://localhost:3030/retiros
+Content-Type: application/json
+
+{
+    "id_user": 1,
+    "r_date": "08/11/1996",
+    "r_hour": "08:11",
+    "r_amount": 3
+}

@@ -1,0 +1,17 @@
+GET http://localhost:3030/oportunidades
+
+###
+ 
+POST http://localhost:3030/oportunidades
+Content-Type: application/json
+
+  {
+    "nombre": "Inversion Y",
+    "descripcion": "Inversion en empresa X con rendimiento de X% anual, y Cat xxxx",
+    "m_min": 400,
+    "m_max": 40000,
+    "m_rendimiento": 14,
+    "m_plazo": 12,
+    "m_unidades": 1,
+    "m_moneda": 1
+  }

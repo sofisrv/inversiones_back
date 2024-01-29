@@ -1,0 +1,13 @@
+GET http://localhost:3030/inversiones
+
+###
+ 
+POST http://localhost:3030/inversiones
+Content-Type: application/json
+
+  {
+    "id_oportunidad": "3",
+    "id_user": "1",
+    "i_date": "09/11/1998",
+    "i_hour": "09:11"
+  }

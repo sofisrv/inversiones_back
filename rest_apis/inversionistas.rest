@@ -1,0 +1,16 @@
+GET http://localhost:3030/inversionistas
+
+###
+ 
+POST http://localhost:3030/inversionistas
+Content-Type: application/json
+
+{
+    "name": "Manuel Alberto",
+    "a_p": "Curiel",
+    "a_m": "Calderon",
+    "email": "manuelcuriel@gmail.com",
+    "b_date": "08/11/1996",
+    "password": "asdfgh",
+    "rfc": "RUAS961108MG0"
+}

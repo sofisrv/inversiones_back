@@ -1,0 +1,14 @@
+GET http://localhost:3030/depositos
+
+###
+ 
+POST http://localhost:3030/depositos
+Content-Type: application/json
+
+  {
+    "id_user": "2",
+    "d_date": "08/11/1996",
+    "d_hour": "04:11",
+    "d_amount": "1000",
+    "d_moneda": "1"
+  }

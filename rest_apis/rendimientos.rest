@@ -1,0 +1,15 @@
+GET http://localhost:3030/rendimientos
+
+###
+ 
+POST http://localhost:3030/rendimientos
+Content-Type: application/json
+
+  {
+    "id_inversion": "1",
+    "r_date": "08/11/1978",
+    "r_hour": "10:11",
+    "r_amount": "1",
+    "r_moneda": "1",
+    "r_status": "1"
+  }
