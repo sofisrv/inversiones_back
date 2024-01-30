@@ -1,5 +1,5 @@
 const Inversionista = require("../../models/Inversionista");
-
+const bcryptjs = require('bcryptjs');
 const router = require("express").Router();
 
 //obtener todos los inversionistas
@@ -17,7 +17,15 @@ router.get('/:id', async (req,res)=> {
 
 //crear un inversionista
 router.post('/', async (req,res)=> {
-    const { name, a_p, a_m, email, b_date, password, rfc } = req.body;
+    const name = req.body.name;
+    const a_p = req.body.a_p;
+    const a_m = req.body.a_m;
+    const email = req.body.email;
+    const b_date = req.body.b_date;
+    const pass = req.body.password;
+    const rfc = req.body.rfc;
+    let password = await bcryptjs.hash(pass, 8); //encriptando la contrase;a
+    console.log(password);
 
     if(!name){
         return res.status(400).json({
@@ -44,7 +52,7 @@ router.post('/', async (req,res)=> {
             error: "Falta Fecha de cumplea;os"
         });
     }
-    if(!password ){
+    if(!password){
         return res.status(400).json({
             error: "Falta Password"
         });
