@@ -1,4 +1,5 @@
 const express = require("express");
+const jwt = require("jsonwebtoken");
 const cors = require("cors");
 
 const depositos = require("./routes/depositos");
@@ -7,6 +8,7 @@ const inversionistas = require("./routes/inversionistas");
 const inversiones = require("./routes/inversiones");
 const retiros = require("./routes/retiros");
 const rendimientos = require("./routes/rendimientos");
+const authToken = require("./routes/authToken");
 
 const db = require("../db/database");
 const app = express();
@@ -33,6 +35,7 @@ app.use('/inversionistas',inversionistas);
 app.use('/inversiones',inversiones);
 app.use('/retiros',retiros);
 app.use('/rendimientos',rendimientos);
+app.use('/authToken',authToken);
 
 app.listen(port, ()=> {
     console.log("servidor ejecutandose en el puerto", port);

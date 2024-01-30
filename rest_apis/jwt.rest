@@ -1,0 +1,9 @@
+POST http://localhost:3030/authToken/login
+
+###
+ 
+GET http://localhost:3030/authToken/protected
+Content-Type: header
+
+authorization: Bearer
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozfSwiaWF0IjoxNzA2NjA4NTM1fQ.dGCvR8AE6Of4mQQpLsyJpdFRYu9IdiFA9wQGe_yGwBQ
